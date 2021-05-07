@@ -1,0 +1,133 @@
+/* #Global
+================================================== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  max-width: 100%;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+video,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+/* #Utilities
+================================================== */
+.container {
+  margin: 0 auto;
+}
+
+.d-desktop {
+  display: block;
+}
+
+.d-mobile {
+  display: none;
+}
+
+@media (max-width: 1023.98px) {
+  .d-desktop {
+    display: none;
+  }
+
+  .d-mobile {
+    display: block;
+  }
+
+  .d-none-mobile {
+    display: none !important;
+  }
+}
+
+/* #Typography
+================================================== */
+.ultra-light {
+  font-weight: 200 !important;
+}
+
+.light {
+  font-weight: 200 !important;
+}
+
+.regular {
+  font-weight: 300 !important;
+}
+
+.medium {
+  font-weight: 500 !important;
+}
+
+.demi-bold {
+  font-weight: 600 !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.ultra-bold {
+  font-weight: 800 !important;
+}
+
+.black {
+  font-weight: 900 !important;
+}
+
+/* #Buttons & Links
+================================================== */
