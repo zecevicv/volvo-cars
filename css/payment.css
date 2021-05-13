@@ -283,7 +283,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 -35px 65px -35px;
+  margin: 0 -17.5px 65px -17.5px;
 }
 
 .payment-page .offers ul li {
@@ -291,7 +291,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 35px;
+  padding: 0 17.5px;
+  flex: 0 0 33%;
 }
 
 .payment-page .offers img {
