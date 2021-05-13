@@ -174,3 +174,89 @@ if (window.innerWidth > 479) {
     },
   });
 }
+
+/* #Option Loader
+================================================== */
+const circleOptions = document.querySelectorAll('.option');
+
+if (circleOptions) {
+  circleOptions.forEach((option) => {
+    option.addEventListener('click', (e) => {
+      option.classList.add('loading');
+      setTimeout(function () {
+        option.classList.remove('loading');
+      }, 1000);
+    });
+  });
+}
+
+/* #ScrollSpy
+================================================== */
+
+/* #Accordion
+================================================== */
+const accordion = document.querySelector('.accordion');
+const collapsibles = document.querySelectorAll('.collapsible');
+
+accordion.addEventListener('click', (e) => {
+  if (e.target.closest('.collapse-toggler')) {
+    e.preventDefault();
+
+    const collapsible = e.target.closest('.collapsible');
+    const collapse = collapsible.querySelector('.collapse');
+    const img = collapse.querySelectorAll('.img');
+
+    collapsibles.forEach((coll) => {
+      if (coll.classList.contains('show') && coll != collapsible) {
+        collCollapse = coll.querySelector('.collapse');
+
+        coll.classList.remove('show');
+        gsap.to(collCollapse, {
+          height: '0'
+        });
+      }
+    });
+
+    collapsible.classList.toggle('show');
+
+    if (collapsible.classList.contains('show')) {
+      gsap.to(collapse, {
+        height: 'auto',
+        duration: .4,
+        ease: 'power1.inOut'
+      });
+      gsap.from(img, {
+        opacity: 0,
+        duration: .5,
+        stagger: .05
+      });
+    } else {
+      gsap.to(collapse, {
+        height: '0'
+      });
+    }
+  }
+});
+
+/* #Popup
+================================================== */
+const popupToggler = document.querySelector('.popup-toggler');
+const popupClose = document.querySelector('.popup-close');
+
+// TL
+const popupTl = gsap.timeline({paused: true});
+popupTl
+  .set('.popup', { display: 'block' })
+  .from('.popup', { 'background-color': 'transparent' })
+  .to('.popup-content', { y: 0 })
+  .set('body', { overflow: 'hidden' });
+
+popupToggler.addEventListener('click', (e) => {
+  e.preventDefault();
+  popupTl.play();
+});
+
+popupClose.addEventListener('click', (e) => {
+  e.preventDefault();
+  popupTl.reverse();
+});
