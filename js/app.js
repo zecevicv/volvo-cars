@@ -21,3 +21,18 @@ window.addEventListener('scroll', (e) => {
 
   scrollPos = (document.body.getBoundingClientRect()).top;
 });
+
+/* #Option Loader
+================================================== */
+const circleOptions = document.querySelectorAll('.option');
+
+if (circleOptions) {
+  circleOptions.forEach((option) => {
+    option.addEventListener('click', (e) => {
+      option.classList.add('loading');
+      setTimeout(function () {
+        option.classList.remove('loading');
+      }, 1000);
+    });
+  });
+}

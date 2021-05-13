@@ -252,6 +252,7 @@ button {
 /* #Buttons & Links
 ================================================== */
 .btn {
+  display: inline-block;
   padding: 12px 24px;
   text-align: center;
   font-size: 14px;
@@ -275,7 +276,15 @@ button {
   border-color: #1C6BBA;
   color: #1C6BBA;
   background: white;
+}
 
+.btn-secondary:hover {
+  background: #1C6BBA;
+  color: white;
+}
+
+.btn-lg {
+  font-size: 16px;
 }
 
 .link {
@@ -290,7 +299,7 @@ button {
   margin-bottom: 2px;
 }
 
-/* #Swiper Arrows
+/* #Swiper Overrides
 ================================================== */
 .swiper-arrows {
   width: 100%;
@@ -333,6 +342,59 @@ button {
 .swiper-arrows .swiper-button-next.swiper-button-disabled, 
 .swiper-arrows .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 4px;
+  opacity: 1;
+  background: #EAEAEA;
+}
+
+.swiper-pagination-bullet-active {
+  background: #141414;
+}
+
+/* #Option & Loading
+================================================== */
+.option {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.option.active {
+  border: 1px solid #1C6BBA;
+}
+
+.option.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.option.circle-option.loading::after {
+  border-radius: 50%;
+}
+
+.option.loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url('../img/global/spinner.gif');
+  background-size: contain;
+  background-position: center;
+  z-index: 2;
 }
 
 /* #Header

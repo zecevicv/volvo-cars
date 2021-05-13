@@ -175,21 +175,6 @@ if (window.innerWidth > 479) {
   });
 }
 
-/* #Option Loader
-================================================== */
-const circleOptions = document.querySelectorAll('.option');
-
-if (circleOptions) {
-  circleOptions.forEach((option) => {
-    option.addEventListener('click', (e) => {
-      option.classList.add('loading');
-      setTimeout(function () {
-        option.classList.remove('loading');
-      }, 1000);
-    });
-  });
-}
-
 /* #ScrollSpy
 ================================================== */
 
