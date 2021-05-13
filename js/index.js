@@ -228,20 +228,22 @@ accordion.addEventListener('click', (e) => {
 const popupToggler = document.querySelector('.popup-toggler');
 const popupClose = document.querySelector('.popup-close');
 
-// TL
-const popupTl = gsap.timeline({paused: true});
-popupTl
-  .set('.popup', { display: 'block' })
-  .from('.popup', { 'background-color': 'transparent' })
-  .to('.popup-content', { y: 0 })
-  .set('body', { overflow: 'hidden' });
-
-popupToggler.addEventListener('click', (e) => {
-  e.preventDefault();
-  popupTl.play();
-});
-
-popupClose.addEventListener('click', (e) => {
-  e.preventDefault();
-  popupTl.reverse();
-});
+if (popupToggler && popupClose) {
+  // TL
+  const popupTl = gsap.timeline({paused: true});
+  popupTl
+    .set('.popup', { display: 'block' })
+    .from('.popup', { 'background-color': 'transparent' })
+    .to('.popup-content', { y: 0 })
+    .set('body', { overflow: 'hidden' });
+  
+  popupToggler.addEventListener('click', (e) => {
+    e.preventDefault();
+    popupTl.play();
+  });
+  
+  popupClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    popupTl.reverse();
+  });
+}
