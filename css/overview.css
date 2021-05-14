@@ -1,0 +1,977 @@
+/* #Body
+================================================== */
+@media (max-width: 1023.98px) {
+  body {
+    padding-bottom: 127px;
+  }
+}
+
+/* #Overview Page
+================================================== */
+.overview-page {
+  padding-top: 65px;
+}
+
+.overview-page .container {
+  max-width: 974px;
+}
+
+@media (max-width: 779.98px) {
+  .overview-page {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-page .container {
+    padding: 0;
+  }
+}
+
+/* #Overview Heading
+================================================== */
+.overview-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.overview-heading h1 {
+  flex: 0 0 60%;
+}
+
+.overview-heading p {
+  flex-grow: 1;
+  padding-right: 32px;
+}
+
+@media (max-width: 779.98px) {
+  .overview-heading {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .overview-heading h1 {
+    margin-bottom: 15px;
+  }
+
+  .overview-heading p {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-heading {
+    padding: 0 24px;
+  }
+}
+
+/* #Overview
+================================================== */
+.overview {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 1023.98px) {
+  .overview {
+    display: block;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview {
+    margin-bottom: 48px;
+  }
+}
+
+/* #Overview Details
+================================================== */
+.overview-details {
+  padding-right: 32px;
+  flex-grow: 1;
+}
+
+.overview-details h2 {
+  margin-bottom: 30px;
+}
+
+/* Info 1 */
+.overview-details .info-1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.overview-details .info-1 li {
+  flex: 0 0 50%;
+  padding: 0 0 30px 0;
+}
+
+.overview-details .info-1 li svg {
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+/* Save */
+.overview-details .save {
+  margin-bottom: 48px;
+}
+
+.overview-details .save h3 {
+  margin-bottom: 12px;
+}
+
+.overview-details .save .line {
+  height: 1px;
+  width: 100%;
+  background-color: #EBEBEB;
+  margin: 24px 0;
+}
+
+.overview-details .save .link {
+  color: #141414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-details .save .btn {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Price */
+.overview-details .price {
+  margin-bottom: 48px;
+}
+
+.overview-details .price h3 {
+  margin-bottom: 24px;
+}
+
+.overview-details .price p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-details .price p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* Offer */
+.overview-details .offer {
+  margin-bottom: 30px;
+}
+
+.overview-details .offer h3 {
+  margin-bottom: 24px;
+}
+
+.overview-details .offer ul {
+  margin-bottom: 12px;
+}
+
+.overview-details .offer ul li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.overview-details .offer ul li svg {
+  margin-left: 10px;
+}
+
+/* Insurance */
+.overview-details .insurance {
+  margin-bottom: 50px;
+}
+
+.overview-details .insurance p {
+  margin-bottom: 12px;
+}
+
+/* Order */
+.overview-details .order .btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.overview-details .order p {
+  text-align: center;
+}
+
+@media (max-width: 1023.98px) {
+  .overview-details {
+    padding-right: 0;
+  }
+
+  .overview-details .order {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    padding: 24px;
+    
+  }
+
+  .overview-details .order .btn {
+    max-width: 325px;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .overview-details .save,
+  .overview-details .info-1,
+  .overview-details .price {
+    max-width: 450px;
+  }
+
+  .overview-details .save .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-details h2,
+  .overview-details .save, 
+  .overview-details .info-1, 
+  .overview-details .price,
+  .overview-details .offer,
+  .overview-details .insurance {
+    padding: 0 24px;
+  }
+
+  .overview-details .price,
+  .overview-details .offer {
+    background-color: #fafafa;
+    padding: 24px;
+  }
+
+  .overview-details .price {
+    margin-bottom: 24px;
+  }
+
+  .overview-details .info-1 li {
+    padding: 0 0 20px 0;
+  }
+
+  .overview-details .offer {
+    margin-bottom: 0;
+  }
+  
+  .overview-details .insurance {
+    background-color: #fafafa;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+  }
+}
+
+/* #Sticky Gallery
+================================================== */
+.sticky-gallery {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 60%;
+
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  max-height: 100%;
+}
+
+.sticky-gallery-wrapper {
+  flex-grow: 1;
+  background-color: #FAFAFA;
+
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  max-height: 100%;
+}
+
+.sticky-wrapper {
+  position: sticky;
+  top: 96px;
+
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  max-height: 100%;
+}
+
+.sticky-gallery .swiper-container {
+  cursor: grab;
+}
+
+.sticky-gallery .swiper-pagination {
+  width: 100%;
+  position: static;
+  padding-top: 4px;
+}
+
+.sticky-gallery .swiper-arrows {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  width: 55px;
+  padding: 0 4px;
+  z-index: 1;
+  transform: none;
+}
+
+.sticky-gallery .swiper-arrows .swiper-button-next,
+.sticky-gallery .swiper-arrows .swiper-button-prev {
+  width: 18px;
+  height: 18px;
+}
+
+.sticky-gallery .swiper-arrows .swiper-button-next.swiper-button-disabled, 
+.sticky-gallery .swiper-arrows .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.25;
+}
+
+@media (max-width: 1023.98px) {
+  .sticky-gallery-wrapper {
+    background-color: white;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .sticky-gallery .swiper-arrows {
+    display: none;
+  }
+}
+
+/* #Overview Design
+================================================== */
+.overview-design {
+  margin-bottom: 60px;
+}
+
+.overview-design h3 {
+  margin-bottom: 12px;
+}
+
+.overview-design .design-table {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+
+.overview-design .group {
+  border-bottom: 1px solid #EBEBEB;
+  padding: 24px 0;
+}
+
+.overview-design p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-design p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+
+@media (max-width: 779.98px) {
+  .overview-design .design-table {
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-design {
+    padding: 0 24px;
+  }
+
+  .overview-design .design-table {
+    display: block;
+  }
+
+  .overview-design {
+    margin-bottom: 48px;
+  }
+}
+
+/* #Overview Financing
+================================================== */
+.overview-financing {
+  margin-bottom: 60px;
+}
+
+.overview-financing h3 {
+  margin-bottom: 12px;
+}
+
+.overview-financing .link {
+  display: inline-block;
+  margin-bottom: 36px;
+}
+
+.overview-financing p {
+  display: flex;
+  justify-content: space-between;
+  max-width: 460px;
+}
+
+.overview-financing p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 479.98px) {
+  .overview-financing {
+    padding: 0 24px;
+    margin-bottom: 48px;
+  }
+}
+
+/* #Overview Safety
+================================================== */
+.overview-safety {
+  margin-bottom: 52px;
+}
+
+/* Safety Levels */
+.s-level-0 {
+  background: #d22627;
+  color: #fff;
+}
+
+.s-level-1 {
+  background: #ee8222;
+  color: #fff;
+}
+
+.s-level-2 {
+  background: #ffca26;
+  color: #fff;
+}
+
+.s-level-3 {
+  background: #1dba9b;
+  color: #fff;
+}
+
+.s-level-4 {
+  background: #3197ac;
+  color: #fff;
+}
+
+.s-level-5 {
+  background: #219dd3;
+  color: #fff;
+}
+
+.s-level-6 {
+  background: #1184c7;
+  color: #fff;
+}
+
+.s-level-7 {
+  background: #3a7fc2;
+  color: #fff;
+}
+
+.s-level-8 {
+  background: #4166b0;
+  color: #fff;
+}
+
+/* Heading */
+.safety-heading {
+  margin-bottom: 16px;
+}
+
+/* Row */
+.overview-safety .row {
+  margin-bottom: 52px;
+  display: flex;
+}
+
+/* Table */
+.safety-table {
+  flex: 0 0 55%;
+}
+
+.safety-table table {
+  border: 1px solid #c1c1c1;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.safety-table table tr {
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.safety-table table th {
+  padding: 5px;
+  border-left: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  background: #f5f5f5;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 900;
+  font-family: 'assistant', sans-serif;
+  font-size: 14px;
+}
+
+.safety-table table td {
+  padding: 5px;
+  border-left: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'volvo', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.safety-table .s-level-7 {
+  background: #3a7fc2;
+  color: #fff;
+}
+
+/* Scale */
+.safety-scale {
+  flex-grow: 1;
+  padding-right: 30px;
+}
+
+.safety-scale h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.safety-scale .s-level {
+  display: block;
+  float: left;
+  line-height: 1.8em;
+  text-align: center;
+  width: 6.6%;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'assistant', sans-serif;
+}
+
+.safety-scale .s-label {
+  width: 20.3%;
+  line-height: 1.1em;
+  font-size: 14px;
+  font-family: 'assistant', sans-serif;
+  float: left;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Legend */
+.safety-legend {
+  font-size: 16px;
+}
+
+.safety-legend .legend {
+  display: flex;
+}
+
+.safety-legend .legend .group {
+  flex: 0 0 33%;
+}
+
+.safety-legend .guide ul {
+  display: flex;
+}
+
+.safety-legend .guide p {
+  margin-bottom: 8px;
+}
+
+.safety-legend .guide ul li:not(:last-child) {
+  margin-bottom: 0;
+  margin-left: 24px;
+}
+
+.safety-legend .line {
+  height: 1px;
+  width: 100%;
+  background-color: #EBEBEB;
+  margin: 24px 0;
+}
+
+.safety-legend ul li {
+  display: flex;
+  align-items: center;
+}
+
+.safety-legend ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.safety-legend ul li:before {
+  content: '';
+  display: inline-block;
+  margin-right: -2px;
+  margin-left: 6px;
+}
+
+.safety-legend ul li.d-yes:before {
+  background-color: #1C6BBA;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+}
+
+.safety-legend ul li.d-no:before {
+  content: 'x';
+  color: #BF2012;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.safety-legend ul li.d-optional:before {
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+  border: 1px solid #1C6BBA;
+}
+
+@media (max-width: 779.98px) {
+  .overview-safety .row {
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .safety-table {
+    margin-bottom: 48px;
+  }
+
+  .safety-scale {
+    padding-right: 0;
+  }
+
+  .safety-legend .legend,
+  .safety-legend .guide ul {
+    display: block;
+  }
+
+  .safety-legend ul li,
+  .safety-legend .guide ul li {
+    margin-bottom: 8px!important;
+  }
+
+  .safety-table table td,
+  .safety-table table th {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-safety {
+    padding: 0 24px;
+    margin-bottom: 48px;
+  }
+
+  .safety-scale .s-label {
+    font-size: 10px;
+  }
+
+  .safety-scale .s-level {
+    font-size: 12px;
+  }
+}
+
+/* #Overview Environment
+================================================== */
+.overview-environment {
+  margin-bottom: 70px;
+  display: flex;
+}
+
+/* Levels */
+.level-1 {
+  background: #264f3e;
+}
+
+.level-1.active::after {
+  border-color: #264f3e transparent transparent transparent;
+}
+
+.level-2 {
+  background: #106443;
+}
+
+.level-2.active::after {
+  border-color: #106443 transparent transparent transparent;
+}
+
+.level-3 {
+  background: #067a48;
+}
+
+.level-3.active::after {
+  border-color: #067a48 transparent transparent transparent;
+}
+
+.level-4 {
+  background: #0b924f;
+}
+
+.level-4.active::after {
+  border-color: #0b924f transparent transparent transparent;
+}
+
+.level-5 {
+  background: #15a74f;
+  border: 0px solid #15a74f;
+}
+
+.level-5.active::after {
+  border-color: #15a74f transparent transparent transparent;
+}
+
+.level-6 {
+  background: #4ab848;
+}
+
+.level-6.active::after {
+  border-color: #4ab848 transparent transparent transparent;
+}
+
+.level-7 {
+  background: #a5ce39;
+}
+
+.level-7.active::after {
+  border-color: #a5ce39 transparent transparent transparent;
+}
+
+.level-8 {
+  background: #f8ef20;
+}
+
+.level-8.active::after {
+  border-color: #f8ef20 transparent transparent transparent;
+}
+
+.level-9 {
+  background: #fecc0c;
+}
+
+.level-9.active::after {
+  border-color: #fecc0c transparent transparent transparent;
+}
+
+.level-10 {
+  background: #faa61c;
+}
+
+.level-10.active::after {
+  border-color: #faa61c transparent transparent transparent;
+}
+
+.level-11 {
+  background: #f58220;
+}
+
+.level-11.active::after {
+  border-color: #f58220 transparent transparent transparent;
+}
+
+.level-12 {
+  background: #f15825;
+}
+
+.level-12.active::after {
+  border-color: #f15825 transparent transparent transparent;
+}
+
+.level-13 {
+  background: #db3a27;
+}
+
+.level-13.active::after {
+  border-color: #db3a27 transparent transparent transparent;
+}
+
+.level-14 {
+  background: #cb232c;
+}
+
+.level-14.active::after {
+  border-color: #cb232c transparent transparent transparent;
+}
+
+.level-15 {
+  background: #a82932;
+}
+
+.level-15.active::after {
+  border-color: #a82932 transparent transparent transparent;
+}
+
+/* Table */
+.environment-table {
+  flex: 0 0 55%;
+}
+
+.environment-table h3 {
+  margin-bottom: 16px;
+}
+
+.environment-table table {
+  border: 1px solid #c1c1c1;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.environment-table table tr {
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.environment-table table th {
+  padding: 5px;
+  border-left: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  background: #f5f5f5;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.environment-table table th:last-child {
+  border-left: none;
+}
+
+.environment-table table td {
+  padding: 5px;
+  border-left: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.environment-table table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.environment-table table td:last-child {
+  border-left: none;
+}
+
+.environment-table table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Scale */
+.environment-scale {
+  flex-grow: 1;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.environment-scale .p1 {
+  margin-bottom: 12px;
+}
+
+.environment-scale .p2 {
+  line-height: 1.25;
+}
+
+.environment-scale .level-table {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  direction: ltr;
+}
+
+.environment-scale .level-table .p-label {
+  width: 7.5%;
+  line-height: 1.1em;
+  font-size: 12px;
+  float: left;
+  font-weight: 400;
+  text-align: center;
+}
+
+.environment-scale .level-table .p-label:first-child {
+  margin-right: auto;
+}
+
+.environment-scale .level-table .p-label:last-child {
+  margin-left: auto;
+}
+
+.environment-scale .level-table .p-level {
+  display: block;
+  float: left;
+  line-height: 2em;
+  text-align: center;
+  width: 5.6%;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.environment-scale .level-table .p-level.active {
+  position: relative;
+}
+
+.environment-scale .level-table .p-level.active::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 4px 0 4px;
+}
+
+@media (max-width: 779.98px) {
+  .overview-environment {
+    display: block;
+  }
+
+  .environment-table {
+    margin-bottom: 48px;
+  }
+
+  .environment-scale {
+    padding-right: 0;
+  }
+
+  .environment-scale .p1 {
+    text-align: center;
+  }
+
+  .environment-table table {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-environment {
+    padding: 0 24px;
+    margin-bottom: 48px;
+  }
+
+  .environment-scale .level-table .p-level,
+  .environment-scale .level-table .p-label {
+    font-size: 10px;
+  }
+}
