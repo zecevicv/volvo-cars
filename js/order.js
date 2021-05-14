@@ -9,11 +9,11 @@ overviewToggler.addEventListener('click', (e) => {
 
   if (overviewDropdown.classList.contains('show')) {
     gsap.set(overviewDropdown, {overflow: 'auto'});
-    gsap.to(overviewDropdown, {height: '100%'});
+    gsap.to(overviewDropdown, {height: '100%', duration: .4, ease: 'power1.inOut'});
     gsap.set('body', {overflow: 'hidden'});
   } else {
     gsap.set('body', {overflow: 'visible'});
-    gsap.to(overviewDropdown, {height: '0'});
+    gsap.to(overviewDropdown, {height: '0', duration: .4, ease: 'power1.inOut'});
     gsap.set(overviewDropdown, {overflow: 'hidden'});
   }
 });
