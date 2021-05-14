@@ -1,0 +1,297 @@
+/* #Order Page
+================================================== */
+.order-page {
+  padding: 48px 0 70px 0;
+}
+
+.order-page .container {
+  max-width: 974px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-page .container > * {
+  flex: 0 0 43%;
+}
+
+@media (max-width: 1023.98px) {
+  .order-page {
+    padding: 133px 0 70px 0;
+  }
+
+  .order-page .container {
+    display: block;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .order-page {
+    padding: 122px 0 70px 0;
+  }
+}
+
+/* #Overview Toggler
+================================================== */
+.overview-toggler {
+  display: none;
+  border-top: 1px solid #D5D5D5;
+  border-bottom: 1px solid #D5D5D5;
+}
+
+.overview-toggler .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-toggler .info {
+  display: flex;
+  align-items: center;
+}
+
+.overview-toggler img {
+  margin-left: 40px;
+  width: 90px;
+}
+
+.overview-toggler svg {
+  transition: transform .3s ease;
+}
+
+.overview-toggler.show svg {
+  transform: rotate(270deg);
+}
+
+@media (max-width: 1023.98px) {
+  .overview-toggler {
+    display: block;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview-toggler {
+    padding: 15px 0;
+  }
+
+  .overview-toggler img {
+    margin-left: 20px;
+    width: 45px;
+  }
+}
+
+/* #Overview
+================================================== */
+.overview img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.overview p {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.overview p span:last-child {
+  margin-right: auto;
+}
+
+.overview .line {
+  height: 1px;
+  width: 100%;
+  background-color: #EBEBEB;
+  margin: 24px 0;
+}
+
+.overview ul li {
+  margin-bottom: 12px;
+}
+
+.overview ul li svg {
+  margin-left: 10px;
+}
+
+@media (max-width: 1023.98px) {
+  .overview {
+    position: fixed;
+    top: 158px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100% - 158px);
+    height: 0;
+    overflow-y: auto;
+    z-index: 100;
+    background-color: white;
+    transition: padding .3s ease;
+  }
+  
+  .overview.show {
+    padding-bottom: 96px;
+  }
+
+  .overview-wrapper {
+    max-width: 370px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .overview {
+    top: 128px;
+    max-height: calc(100% - 128px);
+  }
+  
+  .overview.show {
+    padding-bottom: 48px;
+  }
+}
+
+/* #Contact
+================================================== */
+.contact h1 {
+  margin-bottom: 18px;
+}
+
+.contact p {
+  margin-bottom: 15px;
+}
+
+.contact .line {
+  height: 1px;
+  width: 100%;
+  background-color: #EBEBEB;
+  margin: 40px 0;
+}
+
+.contact .btn {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.contact .field {
+  margin-bottom: 20px;
+}
+
+.contact .box {
+  position: relative;
+  height: 48px;
+}
+
+.contact .field input,
+.contact .field select {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #D5D5D5;
+  padding-right: 14px;
+  border-radius: 3px;
+  transition: all .3s ease;
+  position: relative;
+  z-index: 1;
+  color: #141414;
+  font-family: 'assistant', sans-serif;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.contact .field input:focus,
+.contact .field select:focus {
+  border: 1px solid #1C6BBA;
+}
+
+.contact .field.error input,
+.contact .field.error select {
+  border: 1px solid #BF2012;
+  color: #BF2012;
+}
+
+.contact .field input:focus + label,
+.contact .field select:focus + label,
+.contact .field.touched label {
+  top: 25%;
+  font-size: 12px;
+}
+
+.contact .field select {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9' fill='none' %3E %3Cpath d='M15 1L8 8L1 1' stroke='%23141414' stroke-linecap='round' stroke-linejoin='round'%3E %3C/path%3E %3C/svg%3E");
+  background-size: 15px 7px;
+  background-position: left 18px top 51%;
+}
+
+.contact .field select option {
+  font-size: 16px;
+  font-family: 'assistant', sans-serif;
+}
+
+.contact .field label {
+  position: absolute;
+  font-size: 16px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 14px;
+  color: #707070;
+  transition: all .3s ease;
+}
+
+.contact .field.error label {
+  color: #BF2012;
+}
+
+.contact .error-message {
+  display: none;
+  color: #BF2012;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.contact .error-message svg {
+  margin-top: 1px;
+  margin-left: 3px;
+}
+
+.contact .field.error .error-message {
+  display: flex;
+}
+
+@media (max-width: 1023.98px) {
+  .contact {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+
+/* #Checkbox
+================================================== */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 4px;
+  border-color: #707070;
+  border-width: 1px;
+  border-style: solid;
+  flex: 0 0 20px;
+}
+
+.checkbox input:checked {
+  border-color: #1c6bba;
+  background-color: #1c6bba;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none' %3E %3Cpath stroke='%23ffffff' d='M1 6L4 9L11 1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' %3E %3C/path%3E %3C/svg%3E");
+  background-size: 12px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox label {
+  padding-right: 7px;
+}
