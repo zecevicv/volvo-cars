@@ -68,6 +68,45 @@ body.no-scroll {
   overflow: hidden;
 }
 
+body::after {
+  transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+}
+
+body.overlay::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+body::before {
+  transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1100;
+}
+
+body.overlay-2::before {
+  opacity: 1;
+  visibility: visible;
+}
+
 *,
 *::after,
 *::before {
@@ -159,6 +198,10 @@ button {
 .arrow-down {
   transform: rotate(90deg);
   margin-bottom: -1px;
+}
+
+.arrow-right {
+  transform: rotate(0);
 }
 
 /* #Typography

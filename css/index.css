@@ -786,25 +786,359 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1100;
-  height: 100%;
   width: 100%;
-  background-color: #14141415;
-
-  display: none;
+  height: 100%;
+  z-index: 1100;
+  padding-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translateY(100%);
 }
 
 .popup-content {
-  position: absolute;
-  top: 32px;
-  left: 50%;
-  transform: translateX(-50%) translateY(110%);
   background-color: white;
   max-width: 862px;
   max-height: calc(100vh - 64px);
-  overflow-y: auto;
-
-  /* Demo */
-  height: 100%;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  height: auto;
   width: 100%;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.popup-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 48px 48px 0 48px;
+}
+
+@media (max-width: 1023.98px) {
+  .popup {
+    padding-top: 0;
+  }
+
+  .popup-content {
+    max-height: 100%;
+    height: 100%!important;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .popup-body {
+    padding: 24px 24px 0 24px;
+  }
+}
+
+/* #Popup Details
+================================================== */
+.popup-details h2 {
+  margin-bottom: 12px;
+}
+
+.popup-details .popup-body {
+  padding-top: 24px;
+}
+
+.popup-details .price,
+.popup-details .desc {
+  margin-bottom: 24px;
+}
+
+.popup-details .level,
+.popup-details .category-filters {
+  margin-bottom: 40px;
+}
+
+.popup-details .level h3 {
+  margin-bottom: 8px;
+}
+
+.popup-details .category-filters p,
+.popup-details .categories p {
+  margin-bottom: 15px;
+}
+
+.popup-details .category-filters ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px;
+}
+
+.popup-details .category-filters ul li {
+  margin: 4px;
+}
+
+.popup-details .category-filters button {
+  background: white;
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+  padding: 10px 5px;
+  font-size: 12px;
+  font-family: 'assistant', sans-serif;
+  font-weight: 600;
+}
+
+.popup-details .category-filters button.active {
+  border-color: #141414;
+}
+
+.popup-details .categories a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.popup-details .categories a svg {
+  stroke: #1C6BBA;
+}
+
+@media (max-width: 479.98px) {
+  .popup-details .category-filters ul {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+
+  .popup-details .category-filters ul li {
+    margin: 0;
+    margin-left: 8px;
+  }
+}
+
+/* #Popup Details Expanded
+================================================== */
+.popup-details-expanded .popup-close {
+  left: auto;
+  right: 12px;
+  top: 18px;
+}
+
+.popup-details-expanded .row {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.popup-details-expanded .col {
+  flex: 0 0 50%;
+}
+
+.popup-details-expanded .col:first-child {
+  padding-left: 12px;
+}
+
+.popup-details-expanded .col:last-child {
+  padding-right: 12px;
+}
+
+.popup-details-expanded .col img {
+  width: 100%;
+}
+
+@media (max-width: 479.98px) {
+  .popup-details-expanded .row {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .popup-details-expanded .col:first-child {
+    padding-left: 0;
+  }
+  
+  .popup-details-expanded .col:last-child {
+    padding-right: 0;
+  }
+
+  .popup-details-expanded .col img {
+    margin-bottom: 24px;
+  }
+}
+
+/* #Popup Equipment
+================================================== */
+.popup-equipment .row {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.popup-equipment .col {
+  flex: 0 0 50%;
+}
+
+.popup-equipment .col:first-child {
+  padding-left: 12px;
+}
+
+.popup-equipment .col:last-child {
+  padding-right: 12px;
+}
+
+.popup-equipment .col img {
+  width: 100%;
+}
+
+.popup-equipment .equipment-btn {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.popup-equipment .equipment-btn .btn {
+  width: 100%;
+  max-width: 270px;
+}
+
+@media (max-width: 1023.98px) {
+  .popup-equipment .equipment-btn {
+    margin-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+  }
+
+  .popup-equipment .popup-body {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .popup-equipment .row {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .popup-equipment .col:first-child {
+    padding-left: 0;
+  }
+  
+  .popup-equipment .col:last-child {
+    padding-right: 0;
+  }
+
+  .popup-equipment .col img {
+    margin-bottom: 24px;
+  }
+}
+
+/* #Popup Engine
+================================================== */
+.popup-engine {
+  padding-bottom: 0;
+}
+
+.popup-engine .popup-footer {
+  background-color: #fafafa;
+  padding: 24px 48px;
+  margin: 0 -48px;
+}
+
+.popup-engine h3 {
+  margin-bottom: 8px;
+}
+
+.popup-engine .info-1 {
+  padding: 10px 0 55px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.popup-engine .info-1 li:not(:last-child) {
+  margin-left: 40px;
+}
+
+.popup-engine .info-1 svg {
+  height: 17px;
+}
+
+.popup-engine .info-2,
+.popup-engine .info-3,
+.popup-engine .info-4 {
+  border-top: 1px solid #ebebeb;
+  padding: 48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.popup-engine .info-2 li,
+.popup-engine .info-3 li,
+.popup-engine .info-4 li {
+  flex: 0 0 33%;
+}
+
+.popup-engine .additional-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup-engine .additional-details>*:not(:last-child) {
+  margin-left: 25px;
+}
+
+.popup-engine .p-level,
+.popup-engine .s-level {
+  line-height: 1.8em;
+  padding: 0 5px;
+  margin-right: 5px;
+  color: white;
+}
+
+@media (max-width: 479.98px) {
+  .popup-engine .additional-details {
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .popup-engine .additional-details > * {
+    margin-bottom: 24px;
+  }
+
+  .popup-engine .info-2,
+  .popup-engine .info-3,
+  .popup-engine .info-4 {
+    padding: 24px 0;
+  }
+
+  .popup-engine .info-2 li,
+  .popup-engine .info-3 li,
+  .popup-engine .info-4 li {
+    flex: 0 0 50%;
+    margin-bottom: 24px;
+  }
+
+  .popup-engine .popup-footer {
+    padding: 24px;
+    margin: 0 -24px;
+  }
 }

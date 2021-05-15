@@ -30,13 +30,22 @@ const dropdown = document.querySelector('.header .dropdown');
 
 if (dropdown) {
   const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+  const body = document.querySelector('body');
   
   // Close on outside click
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.header') && document.querySelector('.header .dropdown.show')) {
+    if (!e.target.closest('.header') 
+    &&
+    !e.target.closest('.popup') 
+    &&
+    !document.querySelector('.popup.show')
+    &&
+    document.querySelector('.header .dropdown.show')
+    ) {
       dropdown.classList.remove('show');
       gsap.set('body', {overflow: 'visible'});
       gsap.to(dropdownMenu, {height: '0'});
+      body.classList.remove('overlay');
     }
   });
   
@@ -49,9 +58,11 @@ if (dropdown) {
       if (dropdown.classList.contains('show')) {
         gsap.set('body', {overflow: 'hidden'});
         gsap.to(dropdownMenu, {height: 'auto'});
+        body.classList.add('overlay');
       } else {
         gsap.set('body', {overflow: 'visible'});
         gsap.to(dropdownMenu, {height: '0'});
+        body.classList.remove('overlay');
       }
     }
   });
