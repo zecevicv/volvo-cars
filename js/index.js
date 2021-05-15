@@ -177,6 +177,27 @@ if (window.innerWidth > 479) {
 
 /* #ScrollSpy
 ================================================== */
+let section = document.querySelectorAll(".main-page .section");
+
+if (section) {
+  let sections = {};
+  let i = 0;
+  
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+  
+  window.onscroll = function() {
+    let scrollPosition = (document.documentElement.scrollTop || document.body.scrollTop) + 300;
+  
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        document.querySelector('.header-links .active').setAttribute('class', ' ');
+        document.querySelector('.header-links a[href*=' + i + ']').setAttribute('class', 'active');
+      }
+    }
+  };
+}
 
 /* #Accordion
 ================================================== */
