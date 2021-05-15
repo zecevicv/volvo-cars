@@ -481,12 +481,33 @@ button {
   user-select: none;
 }
 
+.header-price .dropdown-toggler .full-price,
+.header-price .dropdown-toggler .subscription {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-price .dropdown-toggler .h3 {
+  display: flex;
+}
+
 .header-price .dropdown-toggler svg {
   transition: transform .4s ease-in-out;
+  margin-right: 5px;
 }
 
 .header-price .show .dropdown-toggler svg {
   transform: rotate(270deg);
+}
+
+.header-price .dropdown-toggler .full-price span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-price .dropdown-toggler .full-price span span:last-child {
+  margin-right: 10px;
 }
 
 /* Dropdown Menu */

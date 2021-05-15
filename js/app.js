@@ -24,6 +24,38 @@ if (headerTop && headerBottom) {
   });
 }
 
+/* #Header Dropdown
+================================================== */
+const dropdown = document.querySelector('.header .dropdown');
+
+if (dropdown) {
+  const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+  
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header') && document.querySelector('.header .dropdown.show')) {
+      dropdown.classList.remove('show');
+      gsap.set('body', {overflow: 'visible'});
+      gsap.to(dropdownMenu, {height: '0'});
+    }
+  });
+  
+  // Open/close on Toggler click
+  dropdown.addEventListener('click', (e) => {
+    if (e.target.closest('.dropdown-toggler')) {
+    
+      dropdown.classList.toggle('show');
+  
+      if (dropdown.classList.contains('show')) {
+        gsap.set('body', {overflow: 'hidden'});
+        gsap.to(dropdownMenu, {height: 'auto'});
+      } else {
+        gsap.set('body', {overflow: 'visible'});
+        gsap.to(dropdownMenu, {height: '0'});
+      }
+    }
+  });
+}
 
 /* #Option Loader
 ================================================== */
